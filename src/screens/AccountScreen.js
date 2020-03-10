@@ -10,7 +10,6 @@ import { FontAwesome } from '@expo/vector-icons';
 const AccountScreen = () => {
     const dispatch = useDispatch();
     const state = useSelector(State => State.authReducer.email)
-    console.log(state);
 
     return (
         <SafeAreaView style={{ marginTop: '20%' }}>
