@@ -2,11 +2,11 @@
 this project is going to track a road on a map
 
 # Requierments
--Expo
--Node.js
+- Expo
+- Node.js
 
 # Setup Instructions
-1.npm install or yarn install
+1. npm install or yarn install
 2. download two different projects named trackserver and jsonserver 
 from https://github.com/StephenGrider/rn-casts.git
 3. run two downloaded projects 
