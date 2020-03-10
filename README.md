@@ -10,7 +10,7 @@ this project is going to track a road on a map
 2. download two different projects named trackserver and jsonserver 
 from https://github.com/StephenGrider/rn-casts.git
 3. run two downloaded projects 
-4. After running jsonserver, copy the URL address that has been apeared on the CMD 
+4. after running jsonserver, copy the URL address that has been apeared on the CMD 
 and paste it in your tracker.js file instead of baseURL address
 
 # Resource
