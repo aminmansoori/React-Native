@@ -15,7 +15,6 @@ export const signInAction = (email, password) => {
     return async (dispatch) => {
         const response = await trackerApi.post('/signin', { email, password });
         await AsyncStorage.setItem('token', response.data.token);
-        let str = await AsyncStorage.getItem('token');
         saveEmail(dispatch, email);
         navigate('TrackList');
     }
