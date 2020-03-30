@@ -33,8 +33,8 @@ const switchNavigator = createSwitchNavigator({
     Signin: SigninScreen
   }),
   mainFlow: createBottomTabNavigator({
-    trackListFlow,
     TrackCreate: TrackCreateScreen,
+    trackListFlow,
     Account: AccountScreen
   }),
 });

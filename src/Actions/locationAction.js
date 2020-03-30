@@ -1,3 +1,5 @@
+import trackerApi from '../api/tracker';
+
 export const StartRecordingAction = (recording) => {
     return {
         type: 'startRecording',
@@ -11,9 +13,15 @@ export const StopRecordingAction = (recording) => {
     }
 }
 export const addLocationAction = (Location) => {
-    return {
-        type: 'add_location',
-        payload: Location
+    // console.log(Location);
+
+    // return {
+    //     type: 'add_location',
+    //     payload: Location
+    // }
+    return async (dispatch) => {
+        await trackerApi.post('/currentlocation', { location: [Location] })
+        saveLocation(dispatch, Location);
     }
 }
 export const ChangeNameAction = (name) => {
@@ -26,6 +34,13 @@ export const resetAction = () => {
     return {
         type: 'reset',
     }
+}
+
+export const saveLocation = (dispatch, Location) => {
+    dispatch({
+        type: 'add_location',
+        payload: Location
+    })
 }
 
 

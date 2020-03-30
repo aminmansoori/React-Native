@@ -1,4 +1,4 @@
-// import '../_mockLocation';
+import '../_mockLocation';
 import React from 'react';
 import { useCallback } from 'react';
 import { View } from 'react-native';
@@ -16,7 +16,8 @@ const TrackCreateScreen = ({ isFocused }) => {
     const dispatch = useDispatch();
     const recording = useSelector(State => State.LocationReducer.recording)
     const callback = useCallback(location => { dispatch(addLocationAction(location)) }, [recording])
-    useLocation(isFocused || recording, callback)
+    // useLocation(isFocused || recording, callback)
+    useLocation(true,callback)
 
 
     return (

@@ -11,7 +11,14 @@ export const createTrack = (locations, name) => {
 export const fetchTrack = () => {
     return async (dispatch) => {
         const response = await trackerApi.get('/tracks')
-        saveTrack(dispatch,response.data)
+        saveTrack(dispatch, response.data)
+    }
+}
+
+export const removeTrack = (name) => {
+    return async (dispatch) => {
+        const response = await trackerApi.post('/removetrack', { name })
+        saveTrack(dispatch, response.data)
     }
 }
 

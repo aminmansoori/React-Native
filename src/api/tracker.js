@@ -2,7 +2,8 @@ import axios from 'axios';
 import { AsyncStorage } from 'react-native';
 
 const instance = axios.create({
-    baseURL: ''  //baseURL is achieved via run jsonserver project
+    // baseURL: 'https://trackservice-aminreza.fandogh.cloud/'  //baseURL is achieved via run jsonserver project
+    baseURL: 'http://3c547b04.ngrok.io'  //baseURL is achieved via run jsonserver project
 });
 
 instance.interceptors.request.use(
